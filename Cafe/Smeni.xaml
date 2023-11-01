@@ -1,0 +1,19 @@
+﻿<Window x:Class="Cafe.Smeni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe"
+        mc:Ignorable="d"
+        Title="Смены" Height="450" Width="800" >
+    <Grid Background="#E6E6FA">
+        <ListBox x:Name="changeListBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200" Background="#E6E6FA">
+            <ListBoxItem Content="Смена 1" />
+            <ListBoxItem Content="Смена 2" />
+            <ListBoxItem Content="Смена 3" />
+            <ListBoxItem Content="Смена 4" />
+            <ListBoxItem Content="Смена 5" />
+        </ListBox>
+        <Button Content="Назад" Background="#545d6a" Foreground="White" Width="100" Margin=" 30 10 " HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="16" Click="Back_Click" />
+    </Grid>
+</Window>

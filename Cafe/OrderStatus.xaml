@@ -1,0 +1,31 @@
+﻿<Window x:Class="Cafe.OrderStatus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe"
+        mc:Ignorable="d"
+        Title="Статус заказов" Height="400" Width="600">
+    <Grid Background="#E6E6FA">
+        <ListView Name="orderListView" Background="#E6E6FA">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Заказ" Width="120" />
+                    <GridViewColumn Header="Статус" Width="120">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <GroupBox Header="Статус">
+                                    <StackPanel>
+                                        <RadioButton Content="Готов" />
+                                        <RadioButton Content="В процессе" />
+                                    </StackPanel>
+                                </GroupBox>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Назад" Background="#545d6a" Foreground="White" Width="100" Margin=" 30 10 " HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="16" Click="Back_Click" />
+    </Grid>
+</Window>

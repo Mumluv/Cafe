@@ -1,0 +1,63 @@
+﻿<Window x:Class="Cafe.Smena"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe"
+        mc:Ignorable="d"
+         Title="Меню официанта" Height="450" Width="800">
+
+    <Grid Background="#E6E6FA">
+        <!-- Здесь размещаются элементы интерфейса -->
+        <StackPanel>
+            <Label Content="Перечень заказов:" />
+            <ListView x:Name="OrdersListView">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Номер заказа" />
+                        <GridViewColumn Header="Дата" />
+                        <GridViewColumn Header="Клиенты" />
+                        <GridViewColumn Header="Столик" />
+                        <GridViewColumn Header="Блюда" />
+                        <GridViewColumn Header="Напитки" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <Label Content="Места (столик):" />
+            <ComboBox x:Name="TableComboBox" >
+                <ComboBoxItem Content="Стол №1" />
+                <ComboBoxItem Content="Стол №2" />
+                <ComboBoxItem Content="Стол №3" />
+                <ComboBoxItem Content="Стол №4" />
+                <ComboBoxItem Content="Стол №5" />
+                <ComboBoxItem Content="Стол №6" />
+                <ComboBoxItem Content="Стол №7" />
+                <ComboBoxItem Content="Стол №" />
+                
+                <!-- Добавьте нужное количество столов -->
+            </ComboBox>
+
+            <Label Content="Количество клиентов:" />
+            <TextBox x:Name="NumberOfClientsTextBox" />
+
+            <Label Content="Блюда:" />
+            <ListBox x:Name="DishesListBox">
+                <ListBoxItem Content="Блюдо 1" Background="#E6E6FA"/>
+                <ListBoxItem Content="Блюдо 2" Background="#E6E6FA"/>
+                <ListBoxItem Content="Блюдо 3" Background="#E6E6FA"/>
+                <!-- Добавьте нужное количество блюд -->
+            </ListBox>
+
+            <Label Content="Напитки:" />
+            <ListBox x:Name="DrinksListBox">
+                <ListBoxItem Content="Напиток 1" Background="#E6E6FA"/>
+                <ListBoxItem Content="Напиток 2" Background="#E6E6FA"/>
+                <ListBoxItem Content="Напиток 3" Background="#E6E6FA"/>
+                <!-- Добавьте нужное количество напитков -->
+            </ListBox>
+
+            <Button Content="Добавить заказ" Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
